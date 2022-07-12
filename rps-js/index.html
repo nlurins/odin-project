@@ -31,8 +31,23 @@
             const content = document.createElement('p');
             content.id = 'p';
             content.textContent = (`Your result is ${counter}, while the computer's result is ${compcount}`);
+            if(counter === 5){
+                alert('Game over, you are the winner!');
+                counter = 0;
+                compcount = 0;
+                content.textContent = (`Your result is ${counter}, while the computer's result is ${compcount}`);
+
+            }
+            if(compcount === 5){
+                alert('Game over, you are the loser!');
+                counter = 0;
+                compcount = 0;
+                content.textContent = (`Your result is ${counter}, while the computer's result is ${compcount}`);
+
+            }
             
             results.appendChild(content);
+            
         }));
             
         
