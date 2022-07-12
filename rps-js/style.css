@@ -24,7 +24,8 @@ body {
     display: flex;
     width: 20%;
     text-align: center;
-    height: 20%;
+    height: 80px;
+    margin: 5px;
     line-height: 40px;
     padding: 0 10px;
     color: white;
