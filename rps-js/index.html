@@ -8,10 +8,8 @@
 </head>
 <body>
     <script>
-        const playerSelection = "rock";
-        const computerSelection = computerPlay();
-        console.log(computerPlay());
-        console.log(playRound(playerSelection, computerSelection));
+
+        game();
         
         
         
@@ -50,7 +48,14 @@
             }
         }
 
-        
+        function game(){
+            for (let i = 0; i < 5; i++){
+                let userSelection = prompt("Rock, paper or scissors? ");
+                let computerSelection = computerPlay();
+                console.log(playRound(userSelection, computerSelection));
+                
+            }
+        }
 
     </script>
 </body>
