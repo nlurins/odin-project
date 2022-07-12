@@ -7,10 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <div class="buttons">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </div>
+    <div class="result">
 
-        game();
+    </div>
+    <script>
         
+        let counter = 0;
+        let compcount =0;
+        const choices = document.querySelectorAll('button');
+        choices.forEach(choice => choice.addEventListener('click', () => {
+           
+            const compchoice = computerPlay();
+            alert(playRound(choice.className, compchoice));
+            const results = document.querySelector('.result');
+            while(results.firstChild){
+                results.removeChild(results.lastChild);
+            }
+            const content = document.createElement('p');
+            content.id = 'p';
+            content.textContent = (`Your result is ${counter}, while the computer's result is ${compcount}`);
+            
+            results.appendChild(content);
+        }));
+            
         
         
         
@@ -23,24 +47,30 @@
             playerSelection = playerSelection.toLowerCase();
             computerSelection = computerSelection.toLowerCase();
             if(playerSelection === computerSelection){
-                return "It's a tie!";
+                return( "It's a tie!");
             }
             else if(playerSelection === "rock" && computerSelection === "paper"){
+                compcount++;
                 return "You lose! Paper beats Rock.";
             }
             else if(playerSelection === "rock" && computerSelection === "scissors"){
+                counter++;
                 return "you win! Rock beats Scissors.";
             }
             else if(playerSelection === "paper" && computerSelection === "rock"){
+                counter++;
                 return "you win! Paper beats Rock.";
             }
             else if(playerSelection === "paper" && computerSelection === "scissors"){
+                compcount++;
                 return "you lose! Scissors beat Paper.";
             }
             else if(playerSelection === "scissors" && computerSelection === "rock"){
+                compcount++;
                 return "you lose! Rock beats Scissors";
             }
             else if(playerSelection === "scissors" && computerSelection === "paper"){
+                counter++;
                 return "you win! Scissors beat Paper.";
             }
             else{
@@ -48,14 +78,7 @@
             }
         }
 
-        function game(){
-            for (let i = 0; i < 5; i++){
-                let userSelection = prompt("Rock, paper or scissors? ");
-                let computerSelection = computerPlay();
-                console.log(playRound(userSelection, computerSelection));
-                
-            }
-        }
+        
 
     </script>
 </body>
