@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Library</title>
+</head>
+<body>
+    <div onclick ="toggleOn()" class="mt-40 top-40 mx-auto p-5 border text-center w-96 shadow-lg rounded-full font-bold bg-blue-300 hover:bg-blue-600" id="toggle">
+        <button class="" >ADD BOOK</button>
+    </div>
+    <div class="hidden relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white" id="hide">
+            
+            <form id="library" class="flex flex-col gap-5 font-bold " action="#">
+                <p class="text-center text-xl font-bold">Book Details</p>
+                <input type = "text" name="title" required placeholder="TITLE">
+                <input type ="text" name="author" required placeholder="AUTHOR">
+                <input type ="number" name="pages" required placeholder="PAGES READ">
+                <input type="text" name="isRead" required placeholder="READ FULLY?">
+                <input type="button" id="show" class="shadow-lg rounded-full bg-blue-300 border mx-28 py-3 hover:bg-blue-600" onclick="toggleOff()" value="Submit">
+            </form>
+    </div>
+    <div id="booklist" class="absolute mx-auto bottom-20 flex gap-5 font-bold">
+
+    </div>
+</body>
+</html>
+<!--text-xl font-bold container absolute mx-auto py-6 w-[300px] items-center text-center justify-center ml-[42vw] mt-[30vh] mb-[30vh] mr-[42vw] bg-slate-400 px-0-->
