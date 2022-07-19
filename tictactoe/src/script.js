@@ -147,9 +147,18 @@ const gameFlow = (() => {
             alert(player2.hasWon);
             clear();
         }
-        else{
-            //tie
-            
+        else if (document.getElementById('0').textContent.length !==0 &&
+        document.getElementById('1').textContent.length !==0 &&
+        document.getElementById('2').textContent.length !==0 &&
+        document.getElementById('3').textContent.length !==0 &&
+        document.getElementById('4').textContent.length !==0 &&
+        document.getElementById('5').textContent.length !==0 &&
+        document.getElementById('6').textContent.length !==0 &&
+        document.getElementById('7').textContent.length !==0 &&
+        document.getElementById('8').textContent.length !==0 ){
+           
+            alert("it's a draw");
+            clear();
         }
     }
     return {startGame, checkResult};
