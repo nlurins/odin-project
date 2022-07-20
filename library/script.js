@@ -4,12 +4,27 @@
 let myLibrary = [];
 //const addBook = new Book();
 
-function Book(title, author, pages, isRead){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead;
+//function Book(title, author, pages, isRead){
+    //this.title = title;
+    //this.author = author;
+    //this.pages = pages;
+    //this.isRead = isRead;
+//}
+class Book {
+    constructor(title,author,pages,isRead) {
+        this.title = title;
+        this.author=author;
+        this.pages=pages;
+        this.isRead = isRead;
+    };
+    addToLibrary () {
+        if(myLibrary.some(e => e.title === this.title) === false){
+            myLibrary.push(this);
+            table();
+          }
+    };
 }
+
 
 
 function getInput(){
@@ -19,11 +34,8 @@ function getInput(){
   addBook.author = x.elements['author'].value;
   addBook.pages = x.elements['pages'].value;
   addBook.isRead = x.elements['isRead'].value;
-  console.log();
-  if(myLibrary.some(e => e.title === addBook.title) === false){
-    myLibrary.push(addBook);
-    table();
-  }
+  addBook.addToLibrary();
+  
 }
 
 function table(){
