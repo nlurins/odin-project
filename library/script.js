@@ -16,13 +16,13 @@ class Book {
         this.author=author;
         this.pages=pages;
         this.isRead = isRead;
-    };
+    }
     addToLibrary () {
         if(myLibrary.some(e => e.title === this.title) === false){
             myLibrary.push(this);
             table();
           }
-    };
+    }
 }
 
 
@@ -30,10 +30,10 @@ class Book {
 function getInput(){
   let x = document.getElementById("library");
   const addBook = new Book();
-  addBook.title = x.elements['title'].value;
-  addBook.author = x.elements['author'].value;
-  addBook.pages = x.elements['pages'].value;
-  addBook.isRead = x.elements['isRead'].value;
+  addBook.title = x.elements.title.value;
+  addBook.author = x.elements.author.value;
+  addBook.pages = x.elements.pages.value;
+  addBook.isRead = x.elements.isRead.value;
   addBook.addToLibrary();
   
 }
@@ -50,7 +50,7 @@ function table(){
                                 <h3>${myLibrary[i].author}</h3>
                                 <h3>${myLibrary[i].pages}</h3>
                                 <div class="button" onclick="removeBook(${i})">REMOVE BOOK</div>
-                            `
+                            `;
             const booklist = document.querySelector('#booklist');
             
             const elem = document.createElement('div');

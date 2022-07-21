@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF</title>
+</head>
+<body>
+    <img src ="#">
+    <button onclick="getImage()">NEW IMAGE</button>
+    <script>
+        const img = document.querySelector('img');
+        fetch('https://api.giphy.com/v1/gifs/translate?api_key=4TtPfujmcdxyR8lfYWRmAw5Gi15viO41&s=cats', {mode:'cors'})
+        .then(response =>{
+            return response.json();
+        }).then(response => {
+            img.src = response.data.images.original.url;
+        })
+        async function getImage(){
+            const img = document.querySelector('img');
+            const imgfetch = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=4TtPfujmcdxyR8lfYWRmAw5Gi15viO41&s=cats', {mode:'cors'})
+            const fetchurl = await imgfetch.json();
+            img.src = fetchurl.data.images.original.url;
+            
+        }
+
+    </script>
+
+</body>
+</html>

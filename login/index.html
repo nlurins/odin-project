@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="whole">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            <div class="text">
+                <p>This is not a real online service! You know you ned something like this in your life to help you realize your deepest dreams.</p>
+                <p class="two">Sign up <em>now</em> to get started.</p>
+                <p class="three">You <em>know</em> you want to.</p>
+            </div>
+            <div class="form">
+                <form action="./login" method="POST">
+                    
+                    <fieldset class="register">
+                        <legend>Let's do this!</legend>
+                        <div class="firstrow">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name= "first_name" required>
+                            <label for="e_mail">EMAIL</label>
+                            <input type="email" id="e_mail" name= "e_mail" required>
+                            <label for="pass">PASSWORD</label>
+                            <input type="password" id="pass" name= "pass" required, minlength="8">
+                        </div>
+                        <div class="secondrow">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name= "last_name" required>
+                            
+                            <label for="phone_num">PHONE NUMBER</label>
+                            <input type="number" id="phone_num" name= "phone_num" required minlength="8" placeholder="29405311">
+                            <label for="confirm_pass">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_pass" name= "confirm_pass" required minlength="8">
+                            
+                        </div>
+                        
+                    </fieldset>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+            <div class="bottom">
+                
+                <div class="textbottom">
+                    Already have and account? <a href="#">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 async function getData(city) {
   const query = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9bac5117b64a7764fb9a90466bf4f19f`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9bac5117b64a7764fb9a90466bf4f19f`, {mode:'cors'}
   );
   const response = await query.json();
   const data = await response;
@@ -20,9 +20,19 @@ async function getData(city) {
 }
 
 getData("london");
+input();
 
 async function getNew() {
   const str = await window.location.search;
   const newstr = await str.replace("?search=", "");
-  await getData(newstr);
+  getData(newstr);
+  console.log(newstr);
+}
+
+function input(){
+  const inputbox = document.querySelector('form');
+  inputbox.addEventListener('submit', e => {
+    e.preventDefault();
+    getNew(inputbox.value);
+  });
 }

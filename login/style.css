@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+    padding-top:0;
+    margin-top: 0;
+}
+.whole{
+    display: flex;
+    background-color: #EBECF0;
+    background-image: url("image.jpg");
+    background-size: cover;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.left{
+    flex-basis: 33vw;
+    flex-shrink: 1;
+    flex-grow: 0;
+    
+    height:100vh;
+    
+}
+
+.register{
+    display: flex;
+    gap: 3rem;
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 66vw;
+
+}
+
+.firstrow{
+    display: flex;
+    flex-direction: column;
+}
+.secondrow{
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    padding-left: 0;
+    
+}
+
+fieldset {
+    background-color: white;
+}
+
+div{
+    margin:0;
+    padding:0;
+}
