@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div{
+            background-color: green;
+            border: 1px solid black;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        for(let i=0; i<5; i++) {
+            document.querySelector(`div:nth-child(${i+1})`).addEventListener('click', () => {
+                console.log(i);
+            })
+        }
+    </script>
+</body>
+</html>
